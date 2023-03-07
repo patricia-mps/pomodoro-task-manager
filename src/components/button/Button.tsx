@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import style from './Button.module.scss';
 import Props from './Button.types';
+import style from './Button.module.scss';
 
 const Button: FC<Props> = ({
   color = 'light',

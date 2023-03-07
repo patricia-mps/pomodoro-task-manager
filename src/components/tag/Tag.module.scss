@@ -1,0 +1,23 @@
+@import '../../assets/scss/variables';
+
+.component {
+  border: 0px;
+  font-size: 12px;
+  color: map-get($colors, light);
+  padding: map-get($distance, s) map-get($distance, m);
+  text-transform: uppercase;
+  border-radius: $border-radius;
+
+  &.started {
+    background-color: map-get($colors, warning);
+  }
+
+  &.stopped,
+  &.canceled {
+    background-color: map-get($colors, danger);
+  }
+
+  &.completed {
+    background-color: map-get($colors, success);
+  }
+}

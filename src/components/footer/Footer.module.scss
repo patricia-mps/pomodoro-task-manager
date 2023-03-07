@@ -7,8 +7,8 @@
   justify-content: center;
   margin-top: map-get($distance, l);
   padding: map-get($distance, m);
-  color: map-get($colors, dark);
-  background: map-get($colors, light);
+  color: map-get($colors, light);
+  background: map-get($colors, secondary);
 
   &__text {
     font-size: 12px;
@@ -25,12 +25,6 @@
 
       & > img {
         height: 22px;
-      }
-
-      &:first-child img {
-        background-color: map-get($colors, dark);
-        border-radius: 100%;
-        border: 2px solid map-get($colors, dark);
       }
     }
   }

@@ -1,11 +1,12 @@
 import { FC } from 'react';
+import Task from '../../components/task';
 import style from './Homepage.module.scss';
 
 const Homepage: FC = (): JSX.Element => {
   return (
     <section className={style.component} data-testid="homepage">
-      <div className={style.component__left}></div>
-      <div className={style.component__right}></div>
+      <div></div>
+      <div className={style.component__content}></div>
     </section>
   );
 };

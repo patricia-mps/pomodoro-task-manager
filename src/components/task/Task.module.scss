@@ -1,0 +1,67 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.component {
+  display: flex;
+  flex-direction: row;
+  gap: map-get($distance, m);
+  align-items: center;
+  justify-content: space-between;
+  color: map-get($colors, light);
+  background-color: map-get($colors, secondary-light);
+  margin-bottom: map-get($distance, l);
+  padding: map-get($distance, s) map-get($distance, m);
+  padding-left: map-get($distance, xl);
+  border-radius: $border-radius;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 16px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: map-get($colors, primary);
+    border-top-left-radius: calc(#{$border-radius} * 2);
+    border-bottom-left-radius: calc(#{$border-radius} * 2);
+  }
+
+  &.started {
+    &::before {
+      background-color: map-get($colors, warning);
+    }
+  }
+
+  &.stopped {
+    &::before {
+      background-color: map-get($colors, danger);
+    }
+  }
+
+  &.completed {
+    &::before {
+      background-color: map-get($colors, success);
+    }
+  }
+
+  &.canceled {
+    &::before {
+      background-color: map-get($colors, danger);
+    }
+  }
+
+  &.disabled {
+    opacity: 0.8;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 12px;
+    @include line-clamp(1);
+  }
+}

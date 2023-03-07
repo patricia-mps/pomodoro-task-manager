@@ -1,12 +1,13 @@
 @import '../../assets/scss/variables';
 
 .component {
-  border: 0px;
-  padding: map-get($distance, m) map-get($distance, xl);
-  text-transform: uppercase;
-  color: map-get($colors, dark);
-  font-weight: bold;
   cursor: pointer;
+  color: map-get($colors, light);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 0px;
+  padding: map-get($distance, s) map-get($distance, m);
   border-radius: $border-radius;
 
   &.success {

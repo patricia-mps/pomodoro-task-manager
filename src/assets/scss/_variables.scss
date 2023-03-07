@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,200;1,400&display=swap');
 
 $border-radius: 16px;
 
 $colors: (
-  primary: #176e8d,
-  secondary: #715887,
+  primary: #715887,
+  secondary: #272638,
+  secondary-light: #38384f,
   light: #f3f5f7,
   gray: #212121,
-  dark: #030205,
+  dark: #13121d,
   success: #198754,
   info: #0dcaf0,
   warning: #ffc107,
@@ -19,6 +20,7 @@ $distance: (
   m: 16px,
   l: 24px,
   xl: 32px,
+  xxl: 40px,
 );
 
 $breakpoints: (

@@ -1,10 +1,6 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: map-get($colors, dark);
-  // background-image: url("https://www.pngkey.com/png/full/822-8225699_connected-dots-drawing.png");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: bottom right;
   color: map-get($colors, light);
   margin: 0;
 }
@@ -16,6 +12,7 @@ body {
   min-height: 100vh;
 
   .container {
+    display: flex;
     flex-grow: 1;
     flex-shrink: 0;
     width: 100%;

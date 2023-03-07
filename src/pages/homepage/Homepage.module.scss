@@ -1,45 +1,11 @@
 @import '../../assets/scss/variables';
 
 .component {
-  display: grid;
-  column-gap: 50px;
-  grid-template-columns: 1fr;
-
-  @media (min-width: map-get($breakpoints, sm)) {
-    grid-template-columns: 1fr;
-  }
-
-  @media (min-width: map-get($breakpoints, md)) {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  @media (min-width: map-get($breakpoints, lg)) {
-    grid-template-columns: 1fr 3fr;
-  }
-
-  @media (min-width: map-get($breakpoints, xl)) {
-    grid-template-columns: 1fr 3fr;
-  }
-
-  @media (min-width: map-get($breakpoints, xxl)) {
-    grid-template-columns: 1fr 3fr;
-  }
-
-  &__left {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: map-get($distance, xl);
-  }
-
-  &__right {
-    min-height: 50vh;
-    background-color: rgba(map-get($colors, gray), 0.8);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 65%;
-    padding: 10%;
-    border-radius: $border-radius;
-  }
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: $border-radius;
+  background-color: map-get($colors, secondary);
+  padding: map-get($distance, l);
 }
