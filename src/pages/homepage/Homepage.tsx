@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import Task from '../../components/task';
 import style from './Homepage.module.scss';
 
 const Homepage: FC = (): JSX.Element => {
