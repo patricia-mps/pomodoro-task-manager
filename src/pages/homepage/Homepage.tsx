@@ -1,10 +1,9 @@
 import { FC, useEffect } from 'react';
 import useDispatch from '../../utils/hooks/useDispatch';
 import useSelector from '../../utils/hooks/useSelector';
-import { addTaskStatus, getTasksList } from '../../store/tasksSlice';
+import { getTasksList } from '../../store/tasksSlice';
 import Task from '../../components/task';
 import TaskInterface from '../../interfaces/task';
-
 import style from './Homepage.module.scss';
 
 const Homepage: FC = (): JSX.Element => {
