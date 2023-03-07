@@ -18,7 +18,7 @@ const Task: FC<Props> = ({
     <div className={style.component__title}>{title}</div>
     <div className={style.component__description}>{description}</div>
     {status && <Tag status={status} text={status} />}
-    <Button color="success" text="start" onClick={onClickStart} />
+    <Button disabled={disabled} color="success" text="start" onClick={onClickStart} />
   </section>
 );
 

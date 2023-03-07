@@ -1,4 +1,5 @@
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
 
 .component {
   display: flex;
@@ -7,5 +8,49 @@
   justify-content: space-between;
   border-radius: $border-radius;
   background-color: map-get($colors, secondary);
-  padding: map-get($distance, l);
+  padding: 3%;
+  @include thin-scroll-bar();
+
+  &__summary {
+    background-color: map-get($colors, secondary-light);
+    border-radius: $border-radius;
+    padding: map-get($distance, s);
+
+    @media (min-width: map-get($breakpoints, sm)) {
+      padding: map-get($distance, m);
+    }
+
+    h2 {
+      font-size: 15px;
+      margin: 0;
+      border-bottom: 1px solid map-get($colors, light);
+    }
+  }
+
+  &__sumlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    & > div {
+      text-align: center;
+    }
+  }
+
+  &__tasksList {
+    max-height: 300px;
+    overflow: auto;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (min-width: map-get($breakpoints, sm)) {
+      padding-left: map-get($distance, s);
+      padding-right: map-get($distance, s);
+    }
+
+    @media (min-width: map-get($breakpoints, md)) {
+      padding-left: map-get($distance, m);
+      padding-right: map-get($distance, m);
+    }
+  }
 }

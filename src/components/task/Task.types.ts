@@ -1,5 +1,5 @@
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
   status?: 'started' | 'stopped' | 'completed' | 'canceled';
   disabled?: boolean;

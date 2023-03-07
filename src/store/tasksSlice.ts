@@ -11,7 +11,7 @@ interface InitialState {
 
 export const getTasksList = createAsyncThunk('list', async (userId: number = 1) => {
   const response = await axios.get(`${process.env.REACT_APP_API_URL}/posts?userId=${userId}`);
-  return { ...response.data };
+  return response.data;
 });
 
 const initialState: InitialState = {
