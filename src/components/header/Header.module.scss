@@ -1,0 +1,19 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/main';
+
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: map-get($distance, l);
+  padding: map-get($distance, m);
+  color: map-get($colors, light);
+  border-bottom: 1px solid map-get($colors, light);
+
+  &__text {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

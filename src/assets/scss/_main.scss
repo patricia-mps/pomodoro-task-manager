@@ -1,0 +1,45 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: map-get($colors, dark);
+  // background-image: url("https://www.pngkey.com/png/full/822-8225699_connected-dots-drawing.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom right;
+  color: map-get($colors, light);
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+
+  .container {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 350px;
+
+    @media (min-width: map-get($breakpoints, sm)) {
+      max-width: 540px;
+    }
+
+    @media (min-width: map-get($breakpoints, md)) {
+      max-width: 780px;
+    }
+
+    @media (min-width: map-get($breakpoints, lg)) {
+      max-width: 960px;
+    }
+
+    @media (min-width: map-get($breakpoints, xl)) {
+      max-width: 1200px;
+    }
+
+    @media (min-width: map-get($breakpoints, xxl)) {
+      max-width: 1250px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+
+$border-radius: 16px;
+
+$colors: (
+  primary: #176e8d,
+  secondary: #715887,
+  light: #f3f5f7,
+  gray: #212121,
+  dark: #030205,
+);
+
+$distance: (
+  s: 8px,
+  m: 16px,
+  l: 24px,
+  xl: 32px,
+);
+
+$breakpoints: (
+  xs: 425px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
