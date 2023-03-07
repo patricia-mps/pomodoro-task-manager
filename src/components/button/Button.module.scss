@@ -1,0 +1,45 @@
+@import '../../assets/scss/variables';
+
+.component {
+  border: 0px;
+  padding: map-get($distance, m) map-get($distance, xl);
+  text-transform: uppercase;
+  color: map-get($colors, dark);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: $border-radius;
+
+  &.success {
+    background-color: map-get($colors, success);
+  }
+
+  &.info {
+    background-color: map-get($colors, info);
+  }
+
+  &.warning {
+    background-color: map-get($colors, warning);
+  }
+
+  &.light {
+    background-color: map-get($colors, light);
+  }
+
+  &.warning {
+    background-color: map-get($colors, warning);
+  }
+
+  &:disabled {
+    color: rgba(16, 16, 16, 0.3);
+    background-color: map-get($colors, light);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    -webkit-box-shadow: 3px 3px 6px 0px rgba(69, 69, 69, 0.3);
+    -moz-box-shadow: 3px 3px 6px 0px rgba(69, 69, 69, 0.3);
+    box-shadow: 3px 3px 6px 0px rgba(69, 69, 69, 0.3);
+    outline: none;
+  }
+}
