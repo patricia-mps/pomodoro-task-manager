@@ -30,4 +30,5 @@ test('renders Homepage correctly', () => {
   render(homepage);
 
   expect(screen.getByTestId('homepage')).toBeInTheDocument();
+  // I didn't have time to do more testing, sorry
 });

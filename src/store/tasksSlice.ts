@@ -9,6 +9,7 @@ interface InitialState {
   message: string;
 }
 
+//As I didn't have time to implement the login, I pass the user id as default
 export const getTasksList = createAsyncThunk('list', async (userId: number = 1) => {
   const response = await axios.get(`${process.env.REACT_APP_API_URL}/posts?userId=${userId}`);
   return response.data;
@@ -16,7 +17,7 @@ export const getTasksList = createAsyncThunk('list', async (userId: number = 1) 
 
 const initialState: InitialState = {
   tasks: [],
-  loading: false,
+  loading: true,
   isUnsuccessful: false,
   message: '',
 };

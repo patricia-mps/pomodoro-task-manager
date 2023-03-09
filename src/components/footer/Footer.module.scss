@@ -2,13 +2,14 @@
 
 .component {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: map-get($distance, l);
-  padding: map-get($distance, m);
+  padding: map-get($distance, s);
   color: map-get($colors, light);
   background: map-get($colors, secondary);
+  gap: map-get($distance, m);
 
   &__text {
     font-size: 12px;

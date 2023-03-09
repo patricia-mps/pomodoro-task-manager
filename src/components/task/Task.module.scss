@@ -3,7 +3,7 @@
 
 .component {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: map-get($distance, s);
   align-items: center;
   justify-content: space-between;
@@ -19,6 +19,20 @@
 
   @media (min-width: map-get($breakpoints, sm)) {
     gap: map-get($distance, m);
+  }
+
+  @media (min-width: map-get($breakpoints, md)) {
+    flex-direction: row;
+
+    .component__title {
+      text-align: left;
+      flex: 1;
+    }
+
+    .component__description {
+      display: flex !important;
+      flex: 3;
+    }
   }
 
   &::before {
@@ -58,24 +72,17 @@
   &__title {
     font-size: 15px;
     font-weight: bold;
-    width: 40%;
-
-    &:not(.open) {
-      @include line-clamp(1);
-    }
+    text-align: center;
   }
 
   &__description {
     font-size: 12px;
-
-    &:not(.open) {
-      @include line-clamp(1);
-    }
+    display: inline-flex;
   }
 
   &__buttonOpen {
     background-color: transparent !important;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 11px;
     border-radius: 0;
     height: 100%;
@@ -85,5 +92,20 @@
     right: 0;
     bottom: 0;
     padding-top: 0;
+  }
+
+  &:not(.open) {
+    .component__buttonOpen {
+      font-size: 20px;
+    }
+
+    .component__title {
+      @include line-clamp(1);
+    }
+
+    .component__description {
+      @include line-clamp(1);
+      display: none;
+    }
   }
 }

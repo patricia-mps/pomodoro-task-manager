@@ -15,11 +15,13 @@ const Task: FC<Props> = ({
 
   return (
     <section
-      className={`${style.component} ${disabled && style.disabled} ${status && style[status]}`}
+      className={`${style.component} ${disabled && style.disabled} ${open && style.open} ${
+        status && style[status]
+      }`}
       data-testid="task"
     >
-      <div className={`${style.component__title} ${open && style.open}`}>{title}</div>
-      <div className={`${style.component__description} ${open && style.open}`}>{description}</div>
+      <div className={style.component__title}>{title}</div>
+      <div className={style.component__description}>{description}</div>
       {status && <Tag status={status} text={status} />}
       {status !== 'completed' && status !== 'started' && (
         <Button disabled={disabled} color="info" text="Start" onClick={onClickStart} />

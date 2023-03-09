@@ -20,19 +20,27 @@
 
     .header {
       h2 {
+        font-size: 18px;
         margin-top: 0;
+        text-align: center;
       }
     }
 
     .body {
+      font-size: 14px;
+
+      span {
+        font-size: 12px;
+      }
     }
 
     .footer {
+      display: flex;
+      flex-direction: row;
       text-align: right;
-
-      button:first-child {
-        margin-right: map-get($distance, s);
-      }
+      margin-top: map-get($distance, m);
+      gap: map-get($distance, s);
+      justify-content: flex-end;
     }
   }
 }
