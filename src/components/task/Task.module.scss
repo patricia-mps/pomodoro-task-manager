@@ -10,8 +10,10 @@
   color: map-get($colors, light);
   background-color: map-get($colors, secondary-light);
   margin-bottom: map-get($distance, l);
-  padding: map-get($distance, s) map-get($distance, m);
+  padding-top: map-get($distance, s);
+  padding-bottom: map-get($distance, s);
   padding-left: map-get($distance, xl);
+  padding-right: 60px;
   border-radius: $border-radius;
   position: relative;
 
@@ -49,12 +51,6 @@
     }
   }
 
-  &.canceled {
-    &::before {
-      background-color: map-get($colors, danger);
-    }
-  }
-
   &.disabled {
     opacity: 0.8;
   }
@@ -62,12 +58,32 @@
   &__title {
     font-size: 15px;
     font-weight: bold;
-    width: 100px;
-    @include line-clamp(1);
+    width: 40%;
+
+    &:not(.open) {
+      @include line-clamp(1);
+    }
   }
 
   &__description {
     font-size: 12px;
-    @include line-clamp(1);
+
+    &:not(.open) {
+      @include line-clamp(1);
+    }
+  }
+
+  &__buttonOpen {
+    background-color: transparent !important;
+    font-size: 20px;
+    line-height: 11px;
+    border-radius: 0;
+    height: 100%;
+    border-left: 1px solid map-get($colors, light);
+    top: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-top: 0;
   }
 }

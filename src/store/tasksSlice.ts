@@ -25,7 +25,13 @@ export const tasksSlice = createSlice({
   name: 'tasks',
   initialState,
   reducers: {
-    addTaskStatus: (state, action: PayloadAction<Task>) => {
+    addTaskStatus: (
+      state,
+      action: PayloadAction<{
+        id: number | undefined;
+        status: 'started' | 'stopped' | 'completed';
+      }>
+    ) => {
       const index = state.tasks.findIndex(item => item.id === action.payload.id);
       if (index !== -1) state.tasks[index].status = action.payload.status;
     },
@@ -39,8 +45,6 @@ export const tasksSlice = createSlice({
         state.loading = false;
         state.isUnsuccessful = false;
         state.tasks = action.payload;
-
-        console.log(action.payload);
       })
       .addCase(getTasksList.rejected, (state, action: any) => {
         const {

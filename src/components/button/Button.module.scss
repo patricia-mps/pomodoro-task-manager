@@ -26,21 +26,12 @@
     background-color: map-get($colors, light);
   }
 
-  &.warning {
-    background-color: map-get($colors, warning);
+  &.danger {
+    background-color: map-get($colors, danger);
   }
 
   &:disabled {
-    color: rgba(16, 16, 16, 0.3);
+    color: map-get($colors, secondary);
     background-color: map-get($colors, light);
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    -webkit-box-shadow: 3px 3px 6px 0px rgba(69, 69, 69, 0.3);
-    -moz-box-shadow: 3px 3px 6px 0px rgba(69, 69, 69, 0.3);
-    box-shadow: 3px 3px 6px 0px rgba(69, 69, 69, 0.3);
-    outline: none;
   }
 }

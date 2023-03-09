@@ -12,8 +12,7 @@
     background-color: map-get($colors, warning);
   }
 
-  &.stopped,
-  &.canceled {
+  &.stopped {
     background-color: map-get($colors, danger);
   }
 

@@ -3,7 +3,7 @@ interface Task {
   id?: number;
   title?: string;
   body?: string;
-  status?: 'started' | 'stopped' | 'completed' | 'canceled';
+  status?: 'started' | 'stopped' | 'completed';
 }
 
 export default Task;
