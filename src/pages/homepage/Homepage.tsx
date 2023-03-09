@@ -23,7 +23,9 @@ const Homepage: FC = (): JSX.Element => {
   const message = useSelector(state => state.tasks.message);
 
   //UseCountdown hook used for pomodoro time traking
-  const { minute, second, counter, start, pause, reset } = useCountdown(5);
+  //25m task countdown
+  const { minute, second, counter, start, pause, reset } = useCountdown();
+  //10m pause countdown
   const {
     isActive: isActiveBreak,
     minute: minuteBreak,
@@ -31,7 +33,8 @@ const Homepage: FC = (): JSX.Element => {
     counter: counterBreak,
     start: startBreakTime,
     reset: resetBreakTime,
-  } = useCountdown(2);
+  } = useCountdown(600);
+  //20m pause countdown
   const {
     isActive: isActiveBigBreak,
     minute: minuteBigBreak,
@@ -39,7 +42,7 @@ const Homepage: FC = (): JSX.Element => {
     counter: counterBigBreak,
     start: startBigBreakTime,
     reset: resetBigBreakTime,
-  } = useCountdown(5);
+  } = useCountdown(1200);
 
   //State variables
   const [selectedTask, setSelectedTask] = useState<TaskInterface | undefined>();
