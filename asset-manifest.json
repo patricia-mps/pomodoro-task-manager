@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pomodoro-task-manager/static/css/main.78976240.css",
-    "main.js": "/pomodoro-task-manager/static/js/main.f034d346.js",
+    "main.js": "/pomodoro-task-manager/static/js/main.bd9cfb4d.js",
     "static/js/787.1c7798ae.chunk.js": "/pomodoro-task-manager/static/js/787.1c7798ae.chunk.js",
     "index.html": "/pomodoro-task-manager/index.html",
     "main.78976240.css.map": "/pomodoro-task-manager/static/css/main.78976240.css.map",
-    "main.f034d346.js.map": "/pomodoro-task-manager/static/js/main.f034d346.js.map",
+    "main.bd9cfb4d.js.map": "/pomodoro-task-manager/static/js/main.bd9cfb4d.js.map",
     "787.1c7798ae.chunk.js.map": "/pomodoro-task-manager/static/js/787.1c7798ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78976240.css",
-    "static/js/main.f034d346.js"
+    "static/js/main.bd9cfb4d.js"
   ]
 }
