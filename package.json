@@ -1,5 +1,6 @@
 {
   "name": "pomodoro-task-manager",
+  "homepage": "https://patricia-mps.github.io/pomodoro-task-manager/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
