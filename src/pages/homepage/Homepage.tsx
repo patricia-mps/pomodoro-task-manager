@@ -23,21 +23,23 @@ const Homepage: FC = (): JSX.Element => {
   const message = useSelector(state => state.tasks.message);
 
   //UseCountdown hook used for pomodoro time traking
-  const { minute, second, counter, start, pause, reset } = useCountdown();
+  const { minute, second, counter, start, pause, reset } = useCountdown(5);
   const {
     isActive: isActiveBreak,
     minute: minuteBreak,
     second: secondBreak,
+    counter: counterBreak,
     start: startBreakTime,
     reset: resetBreakTime,
-  } = useCountdown(600);
+  } = useCountdown(2);
   const {
     isActive: isActiveBigBreak,
     minute: minuteBigBreak,
     second: secondBigBreak,
+    counter: counterBigBreak,
     start: startBigBreakTime,
     reset: resetBigBreakTime,
-  } = useCountdown(1200);
+  } = useCountdown(5);
 
   //State variables
   const [selectedTask, setSelectedTask] = useState<TaskInterface | undefined>();
@@ -69,6 +71,14 @@ const Homepage: FC = (): JSX.Element => {
       setTotalStoppedTasks(tasks.filter(task => task.status === 'stopped').length);
     }
   }, [dispatch, tasks]);
+
+  //Reset breaks timer and add a new message
+  useEffect(() => {
+    if (counterBreak === 0) resetBreakTime();
+    if (counterBigBreak === 0) resetBigBreakTime();
+    if (counterBigBreak === 0 || counterBreak === 0)
+      setDashboardMessage('We hope the break was awesome!! Now you can choose the next task.');
+  }, [counterBreak, counterBigBreak, resetBreakTime, resetBigBreakTime]);
 
   //Set isUnsuccessful message
   useEffect(() => {
