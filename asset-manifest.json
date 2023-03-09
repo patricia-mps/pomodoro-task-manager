@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.78976240.css",
-    "main.js": "/static/js/main.eb620105.js",
-    "static/js/787.1c7798ae.chunk.js": "/static/js/787.1c7798ae.chunk.js",
-    "index.html": "/index.html",
-    "main.78976240.css.map": "/static/css/main.78976240.css.map",
-    "main.eb620105.js.map": "/static/js/main.eb620105.js.map",
-    "787.1c7798ae.chunk.js.map": "/static/js/787.1c7798ae.chunk.js.map"
+    "main.css": "/pomodoro-task-manager/static/css/main.78976240.css",
+    "main.js": "/pomodoro-task-manager/static/js/main.f034d346.js",
+    "static/js/787.1c7798ae.chunk.js": "/pomodoro-task-manager/static/js/787.1c7798ae.chunk.js",
+    "index.html": "/pomodoro-task-manager/index.html",
+    "main.78976240.css.map": "/pomodoro-task-manager/static/css/main.78976240.css.map",
+    "main.f034d346.js.map": "/pomodoro-task-manager/static/js/main.f034d346.js.map",
+    "787.1c7798ae.chunk.js.map": "/pomodoro-task-manager/static/js/787.1c7798ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78976240.css",
-    "static/js/main.eb620105.js"
+    "static/js/main.f034d346.js"
   ]
 }
